@@ -4,5 +4,4 @@
 	<label for='image'>Файл</label>
 	<input type="file" id='image' name="image">
 	<input type="submit" name="">
-
 </form>
