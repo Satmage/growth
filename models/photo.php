@@ -1,5 +1,4 @@
 <?php
-
 function Photos_getAll() 
 {
 	return [
