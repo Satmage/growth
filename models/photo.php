@@ -1,9 +1,24 @@
 <?php
 function Photos_getAll() 
 {
-	return [
-			['title' => 'фото1', 'path' => '/img/photo1.jpg'],
-			['title' => 'фото2', 'path' => '/img/photo2.jpg'],
-			['title' => 'фото3', 'path' => '/img/photo3.jpg'],
-	];
+
+	mysql_connect('localhost','root','');
+	mysql_select_db('gallery');
+
+	//Выборка данных из БД
+	$sql = 'SELECT * FROM image';
+	//Заносим данные из БД в переменную
+	$res = mysql_query($sql);
+
+	$ret = [];
+
+	/*
+	Пока есть данные в БД записывать их в 
+	массив (с преобразованием типа объкта в массив)
+	*/
+	while (false !== ($row = mysql_fetch_assoc($res))) {
+		$ret[] = $row;
+	}
+
+	return $ret;
 }
