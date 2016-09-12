@@ -5,6 +5,12 @@ function sql_connect()
 	mysql_select_db('gallery');
 }
 	
+function sql_exec($sql)
+{
+	sql_connect();
+	mysql_query($sql);
+}
+
 function sql_query($sql)
 {
 	sql_connect();
@@ -19,8 +25,7 @@ function sql_query($sql)
 		$ret[] = $row;
 	}
 
-	return $ret;
-	
+	return $ret;	
 }
 
 ?>
