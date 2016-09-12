@@ -5,14 +5,7 @@
 </head>
 <body>
 
-<form action="./add.php" method="post" enctype="multipart/form-data">
-	<label for='title'>Название</label>
-	<input type="text" id='title' name="title">
-	<label for='image'>Файл</label>
-	<input type="file" id='image' name="image">
-	<input type="submit" name="">
-
-</form>
+<?php include __DIR__.'/form.php'; ?>
 
 <a href="./">На главную</a>
 
