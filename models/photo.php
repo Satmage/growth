@@ -1,10 +1,11 @@
 <?php
+
+require_once __DIR__ . '/../function/sql.php';
+
 function Photos_getAll() 
 {
 
-	mysql_connect('localhost','root','');
-	mysql_select_db('gallery');
-
+	sql_connect();
 	//Выборка данных из БД
 	$sql = 'SELECT * FROM image';
 	//Заносим данные из БД в переменную
