@@ -16,5 +16,7 @@
 	<?php endforeach; ?>
 </table>
 
+<a href="./add.php">Добавить фото</a>
+
 </body>
 </html>
