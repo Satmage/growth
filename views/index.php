@@ -18,7 +18,7 @@
 	<?php endforeach; ?>
 </table>
 
-<a href="./add.php">Добавить фото</a>
+<?php include __DIR__.'/form.php'; ?>
 
 </body>
 </html>
